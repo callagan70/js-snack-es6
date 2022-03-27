@@ -1,10 +1,20 @@
+var soccer = [
+    {
+        'nombre' : 'Custerlengo',
+        'punti' : 0,
+        'falli' : 0,
+    },
+    {
+        'nombre' : 'Abbiategrasso',
+        'punti' : 0,
+        'falli' : 0,
+    }
+]
 
-var l = 0
-var pesante = 0
 const bici = [
 {
     'nombre' : 'Chester',
-    'peso' : 5.6,
+    'peso' : 1.2,
 },
 {
     'nombre' : 'XXlite EVO',
@@ -13,31 +23,53 @@ const bici = [
 {
     'nombre' : 'Marin',
     'peso' : 3.2,
+},
+{
+    'nombre' : 'Pippo',
+    'peso' : 7.9,
+},
+{
+    'nombre' : 'Pluto',
+    'peso' : 5.2,
+},
+{
+    'nombre' : 'Paperino',
+    'peso' : 0.7,
 }
 ]
 
-console.log(bici)
+var k = 0
+var n = 0
+var w = 0
 
-for (i = 0; i <= bici.length; i++){
-     l++
+for (i = 0; i < bici.length; i++){
+    k = bici[i]['peso']
+
+    if (bici[i]['peso'] > w){
+        w = bici[i]['peso']
+        n = i
+    }
+    console.log(n)
     document.getElementById("bike").innerHTML +=  
     `
-    <div>La ${l}° bicicletta si chiama: ${bici[i]['nombre']}: </div>
+    <div>La ${i}° bicicletta si chiama: ${bici[i]['nombre']}</div>
     <div>Pesa: ${bici[i]['peso']} kg</div>
     `
-    if (bici[i]['peso'] > bici[l]['peso'] ){
-        
-    } 
 }
 
+document.getElementById("bike").innerHTML += 
+`
+<br>
+<div>La bicicletta che si chiama: ${bici[n]['nombre']} è la più pesante</div>
+`
 
-
-
-
-// const bici2 []
-// for ( i= 0; i <= bici.length; i++){
-// [bici[i]["nombre"], ]
-
-
-
-// }
+for (i = 0; i < soccer.length; i++){
+    soccer[i]['punti'] = Math.floor(Math.random () * (1 - 100) * -1)
+    soccer[i]['falli'] = Math.floor(Math.random () * (1 - 100) * -1)
+    console.log("Nome squadra: "  + soccer[i]['nombre'], "Falli fatti: " + soccer[i]['falli'])
+    document.getElementById("squadre").innerHTML += 
+`
+<br>
+<div>La squadra: ${soccer[i]['nombre']} ha fatto ${soccer[i]['falli']}</div>
+`
+}
