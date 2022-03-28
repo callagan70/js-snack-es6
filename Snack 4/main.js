@@ -25,14 +25,18 @@ var x = "";
         array_id.push(element.name)
   });
 
-  for (i=0; i < students.length; i++){
+  for (i=0; i < array_nomi.length; i++){
     document.getElementById("nomi1").innerHTML += `<div>${array_nomi[i]}</div>`
 };
 
 
+for (i=0; i < array_voto.length; i++){
+    document.getElementById("nomi2").innerHTML += `<div>${array_voto[i]}</div>`
+};
 
-
-
+for (i=0; i < array_id.length; i++){
+    document.getElementById("nomi3").innerHTML += `<div>${array_id[i]}</div>`
+};
 
 
 
