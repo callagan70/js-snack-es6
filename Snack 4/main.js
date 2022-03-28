@@ -14,48 +14,29 @@ var array_id = []
 
 var x = "";
 
-  students.forEach((element) => {
+students.forEach((element) => {
     x = element.name.toUpperCase()
-    array_nomi .push(x)
-    if(element.grades >= 70 ){
+    array_nomi.push(x)
+    if (element.grades >= 70) {
         array_voto.push(element.name)
     }
-        
-    if(element.grades >= 70 && element.id >= 120)
-        array_id.push(element.name)
-  });
 
-  for (i=0; i < array_nomi.length; i++){
+    if (element.grades >= 70 && element.id >= 120)
+        array_id.push(element.name)
+});
+
+for (i = 0; i < array_nomi.length; i++) {
     document.getElementById("nomi1").innerHTML += `<div>${array_nomi[i]}</div>`
 };
 
 
-for (i=0; i < array_voto.length; i++){
+for (i = 0; i < array_voto.length; i++) {
     document.getElementById("nomi2").innerHTML += `<div>${array_voto[i]}</div>`
 };
 
-for (i=0; i < array_id.length; i++){
+for (i = 0; i < array_id.length; i++) {
     document.getElementById("nomi3").innerHTML += `<div>${array_id[i]}</div>`
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 console.log(array_id);
 console.log(array_voto);
