@@ -62,6 +62,9 @@ document.getElementById("bike").innerHTML +=
 <br>
 <div>La bicicletta che si chiama: ${bici[n]['nombre']} è la più pesante</div>
 `
+// const {nome, peso } = bicileggera
+
+
 
 for (i = 0; i < soccer.length; i++){
     soccer[i]['punti'] = Math.floor(Math.random () * (1 - 100) * -1)
